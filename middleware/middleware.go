@@ -6,7 +6,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-// MethodOverride override request method by indpect the hidden filed in form post
+// MethodOverride override request method by inspect the hidden filed in form post
 func MethodOverride(r *gin.Engine) gin.HandlerFunc {
 	return func(c *gin.Context) {
 		if c.Request.Method != "POST" {

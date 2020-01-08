@@ -19,7 +19,6 @@ func NewRouter() *gin.Engine {
 	r.GET("/", controller.IndexHandler)
 	r.GET("/blog", controller.BlogHandler)
 	r.POST("/blog", controller.NewBlogHandler)
-	r.DELETE("/blog")
 
 	r.GET("/blog/:postid", controller.PostHandler)
 	r.DELETE("/blog/:postid", controller.DeletePostHandler)
