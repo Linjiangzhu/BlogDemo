@@ -6,6 +6,7 @@ I will rebuild the blog in the future with gin+gorm+react if I have time. Writin
 - [xs/xid](https://github.com/rs/xid)
 - [go-sql-driver/mysql](https://github.com/go-sql-driver/mysql)
 ### program directory
+```
 ├── assets
 │   ├── css
 │   │   └── main.css
@@ -39,3 +40,4 @@ I will rebuild the blog in the future with gin+gorm+react if I have time. Writin
     └── partials
         ├── footer.html
         └── header.html
+```
