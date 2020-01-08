@@ -1,0 +1,11 @@
+{{define "blog/edit.html"}}
+{{template "partials/header.html"}}
+<h1>create at: {{.Time}}</h1>
+<form action="/blog/{{.ID}}" method="POST">
+    <input type="hidden" name="_method" value="PUT">
+    <input type="text" name="title" value="{{.Title}}">
+    <input type="text" name="content" value="{{.Content}}">
+    <button>Submit</button>
+</form>
+{{template "partials/footer.html"}}
+{{end}}

@@ -1,0 +1,22 @@
+{{define "admin/dashboard.html"}}
+{{template "partials/header.html"}}
+<h1>Admin Page</h1>
+<a href="/admin/blog/new">Add new Post</a>
+<hr>
+    {{range .Posts}}
+    
+    <div id="outer">
+        <div class="inner"><a href="/blog/{{.ID}}">Title: {{.Title}}</a></a></div>
+        <div class="inner"><a class="button" href="/blog/{{.ID}}/edit">edit</a></div>
+        <div class="inner">
+            <form action="/blog/{{.ID}}" method="POST">
+                <input type="hidden" name="_method" value="DELETE">
+                <button>delete</button>
+            </form>
+        </div>
+    </div>
+    <p>Create at: {{.Time}}</p>
+    <p>Content: {{.Content}}</p>
+    {{end}}
+{{template "partials/footer.html"}}
+{{end}}

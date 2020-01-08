@@ -1,0 +1,9 @@
+{{define "blog/new.html"}}
+{{template "partials/header.html"}}
+<form action="/blog" method="POST">
+    <input type="text" name="title" placeholder="title">
+    <input type="text" name="content" placeholder="type some text">
+    <button>Submit</button>
+</form>
+{{template "partials/footer.html"}}
+{{end}}

@@ -1,0 +1,10 @@
+{{define "blog/blog.html"}}
+{{template "partials/header.html"}}
+    <h1>Blog Home Page</h1>
+    <h1>{{.PageTitle}}</h1>
+    {{range .Posts}}
+        <a href="/blog/{{.ID}}">{{.Title}}</a>
+        <li>{{.Content}}</li>
+    {{end}}
+{{template "partials/footer.html"}}
+{{end}}
